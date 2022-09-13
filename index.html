@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Project Static Page Victor Ramirez Front end Developer</title>
+	<script src=""></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100&family=Indie+Flower&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+	</style>
+</head>
+<body> 
+	<header>
+	  
+	  <!-- Nav bar -->
+		<nav>
+			<ul>
+				<li> <a href="#contact">Contact</a></li>
+				<li> <a href="#portafolio">Portafolio </a></li>
+				<li><a href="#about">About me</a></li>
+				<li style="float:left"><a href="#log" class="home">Home</a></li>
+		</nav>
+				
+	</header>
+
+	<main>
+					<!-- Header slideshow carousel-->
+	
+		<div id="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+       <div class="mySlides fade">     
+		    <div class="numbertext"> 1/2 </div>
+          <img src="1.jpg" style="width:100%">
+          <div class="text"> Front end </div>
+       </div>
+
+       <div class="mySlides fade">     
+		    <div class="numbertext"> 2/2 </div>
+          <img src="2.jpg" style="width:100%">
+          <div class="text"> Back end </div>
+       </div>
+
+          <!-- Next and previous buttons -->
+       <a class="prev" onclick="plusSlides(-1)"> Front end</a>
+       <a class="next" onclick="plusSlides(1)"> Back end</a>
+   </div>
+   <br>
+
+
+		    <!-- The dots/circles -->
+   <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+   </div>
+  
+	<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+		<section>
+			<!-- About me section with my picture-->
+		<div class="flex-container">
+				<div id="mypicture">
+					<img src="p2.jpeg" alt="Victor Ramirez" width="500" height="400">
+				</div>
+				<div id="about">
+					<h1>About me</h1>
+					<p> Entry level Front end developer, I will help you to create an amazing responsive web pages. 
+					<br> If you need a complete fullstack application I can provide support with Python - Django to build Restful API's.   </p>
+				</div>
+		</div>
+
+		
+		<div class="flex-container">
+			<div id="portafolio">
+				<h1>Portafolio</h1>
+				<h4>Front end Development</h4>
+				<p>Front end Developer, responsive design, HTML, CCS3, JavaScript ES6, DOM, React, Redux, Node JS, Bootstrap, Saas, Linux Basic.GIT.</p>
+			</div>
+			<div id="myportafolio">
+					<img src="myporta.png" alt="Portafolio tecnologias" width="600" height="400">
+			</div>
+		</div>
+
+
+    <div class="flex-container">
+		  <div id="portafolio">
+				<img src="itsupport.png" alt="Portafolio tecnologias" width="600" height="400">
+			</div>
+
+  		<div id="myit">
+				<h4>IT Support Level 1</h4>
+				<p>Windows 10 Basic Troubleshooting, Office 0365, Outlook, Active Directory, BIOS update, Structured cabling, CCTV Installation and Maintenance (UTP Cable CAT 5e).  Operating systems  (Windows 10, Linux). Remote connection and virtual machines. Networking LAN & Wireless set up. CISCO Packet tracer network simulations, Hardware and software preventive maintenance, </p>
+	 	  </div>
+    </div>
+			
+		</section>
+	</main>
+
+	<footer>
+		<div id="contact">
+		<h4>Contact:</h4>	
+		<p>Email: victor.ramirez@ingenieriaaplicadaiot.com</p><br>
+		<p>Office: Phone: +52 (222) 570-4212</p><br>
+		<p>Mobile:+52 (222) 895-4110</p>
+		</div>
+	</footer>
+
+</body>
+</html
